@@ -65,7 +65,8 @@ nohup node autoclaimV3.js &
 
 ### 接收报告
 安装上面步骤依次运行的话，就可以定时收到提息的邮件报告了
-<img src="https://github.com/nziyouren/EasyChainxClaim/blob/master/img/send_success.png" alt="Drawing" width="900px" height="625px" />
+
+<img src="https://github.com/nziyouren/EasyChainxClaim/blob/master/img/send_success.png" alt="Drawing" width="414px" height="896px" />
 
 ## 后续计划
 * [ ] 支持其他邮箱发送
