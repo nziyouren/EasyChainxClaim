@@ -1,5 +1,5 @@
 # EasyChainxClaim
-Chainx PCX自动提息投票发邮件的小工具
+A script for claim ChainX PCX interest and nominate node automatically
 
 Chinese Version [README.md](https://github.com/nziyouren/EasyChainxClaim/blob/master/README.md)
 
