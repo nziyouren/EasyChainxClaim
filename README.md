@@ -1,7 +1,7 @@
 # EasyChainxClaim
 Chainx PCX自动提息投票发邮件的小工具
 
-English Version [README_EN.md]()
+English Version [README_EN.md](https://github.com/nziyouren/EasyChainxClaim/blob/master/README_EN.md)
 
 ## 风险及免责声明
 本脚本涉及到用户的账户私钥及邮箱密码，最好在有一定代码基础的情况下使用。如果对脚本不信任，建议不要使用。

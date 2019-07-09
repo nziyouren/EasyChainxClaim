@@ -1,7 +1,7 @@
 # EasyChainxClaim
 Chainx PCX自动提息投票发邮件的小工具
 
-Chinese Version [README.md]()
+Chinese Version [README.md](https://github.com/nziyouren/EasyChainxClaim/blob/master/README.md)
 
 ## Risks and disclaimers
 This script involves the user's account private key and email password, better used if you have some knowledge of the code. If you don't trust the script, don't use it.
