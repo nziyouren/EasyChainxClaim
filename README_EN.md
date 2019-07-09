@@ -3,71 +3,71 @@ Chainx PCX自动提息投票发邮件的小工具
 
 Chinese Version [README.md]()
 
-## 风险及免责声明
-本脚本涉及到用户的账户私钥及邮箱密码，最好在有一定代码基础的情况下使用。如果对脚本不信任，建议不要使用。
-请确保本脚本的使用环境是安全的，为了账户安全请不要在公共电脑上使用！！！
+## Risks and disclaimers
+This script involves the user's account private key and email password, better used if you have some knowledge of the code. If you don't trust the script, don't use it.
+Please ensure that this script is used in a safe environment. For account security, do not use it on a public computer!!!
 
-## EasyPCXClaim是什么？
-EasyPCXClaim是一个能够全自动帮助用户自动提取充值渠道利息、投票利息并复投及发送邮件报告的脚本。其他脚本只能复投并不能及时告知你投票收益情况。
+## What's EasyPCXClaim
+EasyPCXClaim is a script that can help users to claim interest and vote node automatically. Compared to other scripts, it can not only auto claim, but also send you email report about how much interest you claimed in past time.
 
-## 为什么需要EasyPCXClaim？
-由于PCX特殊的充值和投票挖矿方式，在新的资产充值尽量后，未提取的利息会被稀释，为了保证挖矿利益最大化，最好及时提取利息进行复投。但是这个过程需要人工定时操作太枯燥了，所以需要一个全自动的提息投票通知一条龙操作的脚本。
+## Why need EasyPCXClaim
+Due to the special top-up and voting mining methods of PCX, the unextracted interest will be diluted after the new asset top-up comes in. In order to ensure the maximization of mining interests, it is better to withdraw the interest in time for re-investment. But the manual timing of the process is too tedious, so it requires a fully automated claim and vote script.
 
-## EasyPCXClaim脚本功能
-1. 自动提取BTC、SDOT充值渠道的利息
-2. 自动提取投票利息
-3. 提取利息后自动复投
-4. 复投成功后发邮件自动通知（邮件内容包含这次提取利息金额，账户总的PCX余额）
+## EasyPCXClaim Functions
+1. Auto claim BTC/SDOT channel interest
+2. Auto claim vote interest
+3. Auto vote to some node after claim interest
+4. Send email report about cliam interest and your total account balance
 
-## 脚本环境依赖
-### 安装nodejs及npm
-安装nodejs及npm请安装官网教程进行安装
+## Script dependency
+### Install node.js and npm
+To install nodejs and NPM, please refer the official website tutorial
 
-### 安装chainx及邮件依赖
-依次执行如下命令：
+### Install chainx and email dependency
+Execute the following commands successively:
 * npm install chainx.js
 * npm install nodemailer
 * npm install nodejs-nodemailer-outlook
 
-## 如何使用
+## How to use
 
-### 前提条件
-在使用脚本前，请确保安装上面脚本环境依赖都安装正确
+### Environment dependency
+Before using scripts, make sure that the above script environment dependencies are installed correctly
 
-### 修改脚本参数
-打开autoclaimV3.js脚本文件，修改如下参数
+### Modify script parameters
+Open the autoclaimv3.js script file and modify the following parameters
 
-|   参数                 | 含义 |
+|   parameters                 | instruction |
 | :---         | :--- |
-| private_key           |  填写你的账户私钥 |
-| wallet_address        |  填写钱包地址 |
-| nominate_address      |  填写投票的节点地址 |
-| claimInterval         |  提取利息并投票的时间间隔（单位为毫秒，默认为3个小时提取投票一次） |
+| private_key           |  your account private key |
+| wallet_address        |  your account address |
+| nominate_address      |  the candidate address |
+| claimInterval         |  time interval between claim the interest and voting (in milliseconds, the default is 3 hours) |
 
-因为需要自动发送邮件报告，所以需要用来发送邮件的邮箱地址和密码。**目前第一版只支持outlook邮箱**
+The email address and password used to send the email. **Currently only supports outlook(microsoft live) email**
 
-|   参数                 | 含义 |
+|   parameters                 | instruction |
 | -------------         | --- |
-| userMail           |  用来发邮件的outlook邮箱 |
-| userMailPwd        |  邮箱密码 |
-| toMail             |  接收报告的邮箱 |
+| userMail           |  outlook email address for sending emails |
+| userMailPwd        |  email password |
+| toMail             |  any email address used to receive email report |
 
 
 ``
-注意：在第一次使用脚本登陆邮箱，在使用新的ip的情况下可能会触发outlook预警，需要登陆到邮箱里面查看邮件，并信任此次登陆活动，等个10多分钟后就可以成功发送邮件了
+Note: if you log in the mailbox with new IP for the first time, the script may trigger email warning. You need to log in the mailbox to check the mail and trust this log in activity. After more than 10 minutes, you can successfully send the mail
 ``
 
-### 运行脚本
+### Run script
 node autoclaimV3.js
 
-如果想真正的实现全自动运行的话，最好把脚本部署到服务器上并后台运行。使用命令
+If you want run the script in specific time interval, it's best to deploy it on a server(vps) and run it in the background. Using the command
 nohup node autoclaimV3.js &
 
-### 接收报告
-安装上面步骤依次运行的话，就可以定时收到提息的邮件报告了
+### Receive email report
+If you run the above steps successfully, you can receive regular email reports of claim interest and nominate results.
 
 <img src="https://github.com/nziyouren/EasyChainxClaim/blob/master/img/send_success.png" alt="Drawing" width="414px" height="896px" />
 
-## 后续计划
-* [ ] 支持其他邮箱发送
-* [ ] 优化代码
+## Future plan
+* [ ] support other email address to send report
+* [ ] optimize code
